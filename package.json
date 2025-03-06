@@ -7,6 +7,7 @@
     "preview": "bun \"dist/index.js\""
   },
   "dependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@jk2908/cxx": "^0.1.6",
     "clsx": "^2.1.1",
     "hono": "^4.7.2",
