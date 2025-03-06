@@ -1,0 +1,21 @@
+@layer base, utils;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    block-size: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    min-block-size: 100%;
+  }
+}
