@@ -9,6 +9,7 @@
   "dependencies": {
     "@biomejs/biome": "^1.9.4",
     "@jk2908/cxx": "^0.1.6",
+    "@vitejs/plugin-react": "^4.3.4",
     "clsx": "^2.1.1",
     "hono": "^4.7.2",
     "react": "^19.0.0",

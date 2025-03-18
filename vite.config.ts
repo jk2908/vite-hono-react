@@ -8,6 +8,7 @@ import adapter from '@hono/vite-dev-server/bun'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import cxx from '@jk2908/cxx/vite-plugin-cxx'
 import build from '@hono/vite-build/bun'
+import react from '@vitejs/plugin-react'
 
 const resolver = (p: string) => resolve(dirname(fileURLToPath(import.meta.url)), p)
 
@@ -49,13 +50,15 @@ export default defineConfig(({ mode }) => {
 					/^\/(public|assets|static)\/.+/,
 					/^\/node_modules\/.*/,
 				],
+				injectClientScript: false,
 			}),
 			build({ entry }),
-			tsconfigPaths(),
+			react(),
 			cxx(),
+			tsconfigPaths(),
 		],
-		server: { 
-			port: 8787 
+		server: {
+			port: 8787,
 		},
 		ssr: {
 			external: ['react', 'react-dom'],
